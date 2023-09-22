@@ -4,15 +4,15 @@
 int main(void) {
 	int money;
 
-	printf("ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+	printf("±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä : ");
 	scanf("%d", &money);
-	printf("ì˜¤ë§Œì›ê¶Œ %dì¥\n",money/50000);
+	printf("¿À¸¸¿ø±Ç %dÀå\n",money/50000);
 	money %= 50000;
-	printf("ë§Œì›ê¶Œ %dì¥\n", money / 10000);
+	printf("¸¸¿ø±Ç %dÀå\n", money / 10000);
 	money %= 10000;
-	printf("ì²œì›ê¶Œ %dì¥\n", money / 1000);
+	printf("Ãµ¿ø±Ç %dÀå\n", money / 1000);
 	money %= 1000;
-	printf("ë°±ì›ì§œë¦¬ %dê°œ\n", money / 100);
+	printf("¹é¿øÂ¥¸® %d°³\n", money / 100);
 	money %= 100;
-	printf("ì‹­ì›ì§œë¦¬ %dê°œ\n", money / 10);
+	printf("½Ê¿øÂ¥¸® %d°³\n", money / 10);
 }
