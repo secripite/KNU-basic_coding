@@ -3,7 +3,7 @@
 
 char sum_result[20],minus_result[20];
 
-char* sum(char* num1, int len1, char* num2, int len2){
+void sum(char* num1, int len1, char* num2, int len2){
     int temp = 0;
 
     do
@@ -31,7 +31,7 @@ char* sum(char* num1, int len1, char* num2, int len2){
     printf("%s\n", sum_result);
 }
 
-char* minus(char* num1, char* num2){
+void minus(char* num1, int len1, char* num2, int len2){
     
 }
 
