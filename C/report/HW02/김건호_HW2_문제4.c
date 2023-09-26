@@ -32,7 +32,42 @@ void sum(char* num1, int len1, char* num2, int len2){
 }
 
 void minus(char* num1, int len1, char* num2, int len2){
-    
+    int temp = 0,i;
+
+    do
+    {
+        if(len2 + 1){
+            
+            if(*(num1 + len1) - *(num2 + len2) < 0){
+                temp = 10;
+                i = 1;
+                while(1)
+                {
+                    if(*(num1 + len1 - i) != '0'){
+                        *(num1 + len1 - i) -= 1;
+                        break;
+                    }
+                    else{
+                        *(num1 + len1 - i) = 57;
+                    }
+                    i++;
+                };
+
+            }
+            else{
+                temp = 0;
+            }
+            minus_result[len1] = (*(num1 + len1) - *(num2 + len2) + temp + 48);
+        }
+        else{
+            minus_result[len1] = *(num1 + len1);
+        }
+        len1--;
+        len2--;
+
+    } while (len1 + 1);
+
+    printf("%s", minus_result);
 }
 
 int main(){
@@ -52,11 +87,24 @@ int main(){
     len_num2--;
 
 
-
+    
     printf("ÇÕ : ");
     if(len_num1 >= len_num2)
         sum(num1, len_num1, num2, len_num2);
     else
         sum(num2, len_num2, num1, len_num1);
-
+    
+    
+    printf("Â÷ : ");
+    if(len_num1 > len_num2)
+        minus(num1, len_num1, num2, len_num2);
+    else if(len_num1 < len_num2)
+        minus(num2, len_num2, num1, len_num1);
+    else{
+        if(*(num1) > *(num2))
+            minus(num1, len_num1, num2, len_num2);
+        else
+            minus(num2, len_num2, num1, len_num1);
+    }
+    
 }
