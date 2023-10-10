@@ -22,5 +22,5 @@ int main(){
     }
 
     printf("전역 변수 출력 : %d\n", fn_cnt);
-    printf("정적 지역 변수 출력 : %d\n", temp);
+    printf("정적 지역 변수 출력 : %d", temp);
 }
