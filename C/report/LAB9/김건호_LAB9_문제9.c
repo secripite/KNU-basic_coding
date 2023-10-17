@@ -8,11 +8,11 @@ int main(){
     
     printf("source 원 배열 값 :\n");
     for (int i = 0; i < 5;i++){
-        printf("%9.2f", ary[i]);
+        printf("%9.2lf", ary[i]);
     }
     printf("\n\n");
 
-    printf("최대값과 최소값의 차이는 %.6f이다.\n", Mm_difference(ary));
+    printf("최대값과 최소값의 차이는 %.6lf이다.\n", Mm_difference(ary));
 }
 
 double Mm_difference(double *nums){

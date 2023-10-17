@@ -9,13 +9,13 @@ int main(){
 
     printf("원 행렬 값 :\n");
     for (int i = 0; i < 5;i++){
-        printf("%9.2f", ary[i]);
+        printf("%9.2lf", ary[i]);
     }
     copyarray(ary, target, 5);
     printf("\n 함수 copyarray() 호출 후 target 배열 값:\n");
 
     for (int i = 0; i < 5;i++){
-        printf("%9.2f", target[i]);
+        printf("%9.2lf", target[i]);
     }
     printf("\n");
 }
