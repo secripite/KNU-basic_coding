@@ -1,6 +1,14 @@
-int global = 100;
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
 
-int getglobal()
+static int global = 5000;
+extern int getglobal();
+
+int main()
 {
-    return global;
+    printf("전역 변수 : global = %d\n", getglobal());
+    printf("정적 전역 변수 : global = %d\n", global);
+    printf("전역 변수 : global = %d\n", getglobal());
+    global++;
+    printf("정적 전역 변수 : global = %d\n", global);
 }
