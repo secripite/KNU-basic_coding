@@ -6,8 +6,9 @@ extern int getglobal();
 
 int main()
 {
-    printf("Àü¿ª º¯¼ö : global = %d\n", getglobal());
-    printf("Á¤Àû Àü¿ª º¯¼ö : global = %d\n", global);
-    printf("Àü¿ª º¯¼ö : global = %d\n", getglobal());
-    printf("Á¤Àû Àü¿ª º¯¼ö : global = %d\n", global);
+    printf("ì „ì—­ ë³€ìˆ˜ : global = %d\n", getglobal());
+    printf("ì •ì  ì „ì—­ ë³€ìˆ˜ : global = %d\n", global);
+    printf("ì „ì—­ ë³€ìˆ˜ : global = %d\n", getglobal());\
+    global++;
+    printf("ì •ì  ì „ì—­ ë³€ìˆ˜ : global = %d\n", global);
 }
