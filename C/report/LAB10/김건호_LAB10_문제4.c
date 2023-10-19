@@ -1,10 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<conio.h>
 
 int main(){
     char ch;
 
-    while((ch = getchar())!='\n'){
+    while((ch = getche())!='\r'){
         if(ch >= 65 && ch <=90)
             putchar((ch - 65 + 3) % 26 + 65);
         else if(ch >= 97 && ch <=122)
