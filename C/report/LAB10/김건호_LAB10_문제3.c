@@ -7,9 +7,9 @@ int main(){
     int j = 0;
     char buff[40];
 
-    printf("ÀÔ·Â : ");
+    printf("ìž…ë ¥ : ");
     gets(line);
-    printf("Ãâ·Â : ");
+    printf("ì¶œë ¥ : ");
 
     while(line[j]!='\0'){
         int i = 0;

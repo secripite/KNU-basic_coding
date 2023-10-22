@@ -10,7 +10,7 @@ int main(){
     float nums[2];
     float (*fn[4])(float*);
 
-    printf("µÎ °³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+    printf("ë‘ ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
     scanf("%f %f", &nums[0], &nums[1]);
     fn[0] = plus;
     fn[1] = minus;
