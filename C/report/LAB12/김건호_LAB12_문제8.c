@@ -11,7 +11,7 @@ typedef struct person_
 typedef struct professor_
 {
     person info;
-    char class[20];
+    char c_class[20];
     char his_class[2][20];
 } professor;
 
@@ -26,7 +26,7 @@ int main() {
     printf("  이  름  전 화 번 호\t  주  소\t\t학  과\t\t 담 당  과 목\n");
 
     for (int i = 0; i < 5; i++) {
-        printf("  %s %15s %20s %10s", they[i].info.name, they[i].info.phone_num, they[i].info.adress, they[i].class);
+        printf("  %s %15s %20s %10s", they[i].info.name, they[i].info.phone_num, they[i].info.adress, they[i].c_class);
         for (int j = 0; j < 2; j++) {
             printf("%15s", they[i].his_class[j]);
         }

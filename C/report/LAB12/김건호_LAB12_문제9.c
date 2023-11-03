@@ -11,7 +11,7 @@ typedef struct person_
 typedef struct professor_
 {
     person info;
-    char class[20];
+    char c_class[20];
     char his_class[2][20];
 } professor;
 
@@ -20,7 +20,7 @@ typedef struct student_
     person info;
     char sudent_num[10];
     float score;
-    char class[20];
+    char c_class[20];
     char dream[20];
     professor profe;
 } student;
@@ -41,7 +41,7 @@ int main() {
     printf("이 름\t전 화 번 호 \t 주 소 \t      학 번   평 점\t 학과 \t  진 로    지도교수\n");
     for (int i = 0; i < 10; i++)
     {
-        printf("%5s %15s%15s%8s%5.2f%12s%12s%10s\n", student_info[i].info.name, student_info[i].info.phone_num, student_info[i].info.adress, student_info[i].sudent_num, student_info[i].score, student_info[i].class, student_info[i].dream, student_info[i].profe.info.name);
+        printf("%5s %15s%15s%8s%5.2f%12s%12s%10s\n", student_info[i].info.name, student_info[i].info.phone_num, student_info[i].info.adress, student_info[i].sudent_num, student_info[i].score, student_info[i].c_class, student_info[i].dream, student_info[i].profe.info.name);
     }
 
 }

@@ -6,7 +6,7 @@ typedef struct student_
     char name[10];
     char sudent_num[10];
     float score;
-    char class[20];
+    char c_class[20];
     char dream[20];
 }student;
 
@@ -27,7 +27,7 @@ int main() {
 
     for (int i = 0; i < 10; i++)
     {
-        printf("\t%s\t%s\t    %3.1f     %s     %8s\n", Humans[i].name, Humans[i].sudent_num, Humans[i].score, Humans[i].class, Humans[i].dream);
+        printf("\t%s\t%s\t    %3.1f     %s     %8s\n", Humans[i].name, Humans[i].sudent_num, Humans[i].score, Humans[i].c_class, Humans[i].dream);
     }
 
 }
