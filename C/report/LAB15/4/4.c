@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,11 +15,7 @@ typedef struct node_ {
 node* new_node() {
     node* Node = (node*)malloc(sizeof(node));
 
-    if (Node == NULL) {
-        printf("메모리 할당에 실패했습니다.\n");
-        return NULL;
-    }
-
+    Node->name;
     Node->value1 = 0;
     Node->value2 = 0;
     Node->end = 0;
@@ -30,17 +27,24 @@ void Insert(node* head, char* name, float num1, float num2);
 float search(node* head);
 
 int main() {
-    
     node* head = new_node();
+
     head->end = 1;
 
     FILE* fp;
+    FILE* fp2;
     char name[30];
     float num1;
     float num2;
     float result;
 
     fopen_s(&fp, "input.txt", "r");
+    if (fp == NULL)
+    {
+        perror("error fopen");
+        return;
+    }
+    fopen_s(&fp2, "output.txt", "w");
     if (fp == NULL)
     {
         perror("error fopen");
@@ -54,11 +58,13 @@ int main() {
 
     for (int i = 0; i < 6; i++) {
         result = search(head);
+        fprintf(fp2, "%s %.1f %.1f %.1f\n", head->name, head->value1, head->value2, result);
         printf("%d %s %.1f %.1f %.1f\n", i+1, head->name, head->value1, head->value2, result);
         head = head->next;
     }
 
     fclose(fp);
+    fclose(fp2);
 }
 
 
