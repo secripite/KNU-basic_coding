@@ -18,11 +18,11 @@ int main() {
 	wallet bank[2];
 
 	for (int i = 0; i < 2; i++) {
-		printf("ì§€ê°‘%dì˜ ê° í™”íì˜ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”.\n",i+1);
+		printf("Áö°©%dÀÇ °¢ È­ÆóÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n",i+1);
 		scanf("%d %d %d %d %d %d", &bank[i].n50000, &bank[i].n10000, &bank[i].n5000, &bank[i].n1000, &bank[i].n500, &bank[i].n100);
 	}
 
-	printf("ë‘˜ ì¤‘ ë” í° ê¸ˆì•¡ì€ %dìž…ë‹ˆë‹¤.",Calc(bank[0], bank[1]));
+	printf("µÑ Áß ´õ Å« ±Ý¾×Àº %dÀÔ´Ï´Ù.",Calc(bank[0], bank[1]));
 }
 
 int Calc(wallet w1, wallet w2) {
