@@ -22,6 +22,8 @@ int main() {
     int select;
     int flag = 0;
     int cnt = 4;
+
+    printf("Current grade history>>\n");
     print(student, cnt);
 
     while (1)
