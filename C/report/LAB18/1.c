@@ -4,7 +4,7 @@
 int main() {
 	FILE* fp;
 	FILE* fp2;
-	int N;;
+	int N;
 	int num1;
 	int num2;
 
