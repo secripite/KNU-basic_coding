@@ -23,7 +23,7 @@ int main() {
     fopen_s(&fp2, "output.txt", "w");
     fscanf(fp, "%d\n", &num);
 
-    members = (student*)malloc(sizeof(student) * num);
+    members = (student *)malloc(sizeof(student) * num);
     for (int i = 0; i < num; i++)
     {
         fscanf(fp, "%s %s %d %d %d", members[i].number, members[i].name, &members[i].kor, &members[i].eng, &members[i].math);
