@@ -12,7 +12,7 @@ int stack[MAX];
 int top;
 
 int pop();
-int get_color_num(int);
+void print_color_num();
 void push(int value);
 void input_rand_nums(int num);
 
@@ -29,6 +29,7 @@ int main() {
             printf("program end.");
             break;
         }
+        top = 0;
         printf("****************************\n");
         printf("input marble num : ");
         scanf("%d", &num);
@@ -36,13 +37,12 @@ int main() {
         input_rand_nums(num);
 
         printf("result\n");
-        printf("white marble : %d\n", get_color_num(1));
-        printf("black marble : %d\n", get_color_num(0));
+        print_color_num();
         printf("try again? [y/n] : ");
         scanf("%c", &select);
         scanf("%c", &select);
-    }
 
+    }
 }
 
 void input_rand_nums(int num) {
@@ -81,16 +81,23 @@ int pop() {
     return stack[--top];
 }
 
-int get_color_num(int index) {
-    int temp = 0;
-    for (int i = 0; i < top; i++)
+void print_color_num() {
+    int Btemp = 0;
+    int Wtemp = 0;
+    while (top != 0)
     {
-        if (stack[i] == index) {
-            temp++;
+        switch (pop())
+        {
+        case 0:
+            Btemp++;
+            break;
+        case 1:
+            Wtemp++;
+            break;
         }
     }
-    return temp;
-
+    printf("White marble : %d\n", Wtemp);
+    printf("Black marble : %d\n", Btemp);
 }
 
 void push(int value) {
