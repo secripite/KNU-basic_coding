@@ -72,6 +72,10 @@ void input_rand_nums(int num) {
                 push(1);
             }
         }
+        if (top >= MAX) {
+            printf("\nStack overflow Error!\nput in the pocket!\n");
+            return;
+        }
     }
     printf("\nput in the pocket!\n");
 
@@ -101,6 +105,9 @@ void print_color_num() {
 }
 
 void push(int value) {
+    if (top >= MAX) {
+        return;
+    }
     stack[top++] = value;
     return;
 }
